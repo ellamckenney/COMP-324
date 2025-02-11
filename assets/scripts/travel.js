@@ -16,10 +16,14 @@ function travelNotes() {
     let inputVal = inputNote.value;
     // create text node
     let nodeText = document.createTextNode(inputVal);
-    // append text to paragraph
-    p.appendChild(nodeText);
-    // append new paragraph and text to existing note output
-    noteOutput.appendChild(p);
+
+    if (inputVal != '') {
+      let noteText =document.createTextNode(inputVal)
+      p.appendChild(nodeText);
+      // append new paragraph and text to existing note output
+      noteOutput.appendChild(p);
+      inputNote.value='';
+    }
   });
 
 }
