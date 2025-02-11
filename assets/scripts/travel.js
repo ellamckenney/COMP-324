@@ -4,12 +4,23 @@ function travelNotes() {
   // get a reference to .note_output in the DOM
   // n.b. these can be combined as well
   let noteOutput = document.querySelector('.note-output');
-  noteOutput.innerHTML = '<p>My first travel note for Berlin!<p>';
 
   let addNoteBtn = document.getElementById('add-note');
+
+  let inputNote = document.getElementById('note-input');
+
   addNoteBtn.addEventListener('click', () => {
-    console.log('Add button clicked.')
-  })
+    // create p node
+    let p = document.createElement('p');
+    // get value from input field for note
+    let inputVal = inputNote.value;
+    // create text node
+    let nodeText = document.createTextNode(inputVal);
+    // append text to paragraph
+    p.appendChild(nodeText);
+    // append new paragraph and text to existing note output
+    noteOutput.appendChild(p);
+  });
 
 }
 
