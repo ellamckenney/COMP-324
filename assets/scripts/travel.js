@@ -10,21 +10,6 @@ function travelNotes() {
   let inputNote = document.getElementById('note-input');
 
   addNoteBtn.addEventListener('click', () => {
-    // create p node
-    /* let p = document.createElement('p');
-    // get value from input field for note
-    let inputVal = inputNote.value;
-    // create text node
-    let nodeText = document.createTextNode(inputVal);
-
-    if (inputVal != '') {
-      let noteText =document.createTextNode(inputVal)
-      p.appendChild(nodeText);
-      // append new paragraph and text to existing note output
-      noteOutput.appendChild(p);
-      inputNote.value='';
-    } */
-
     createNote(inputNote, noteOutput);
   });
 
@@ -36,23 +21,32 @@ function travelNotes() {
 
 }
 
-function createNote() {
-
+function createNote(inputNote, noteOutput) {
   // create p node
   let p = document.createElement('p');
   // get value from input field for note
   let inputVal = inputNote.value;
-  // create text node
-  let nodeText = document.createTextNode(inputVal);
-
-  if (inputVal != '') {
-    let noteText =document.createTextNode(inputVal)
-    p.appendChild(nodeText);
+  // check input value
+  if (inputVal !== '') {
+    // create text node
+    let noteText = document.createTextNode(inputVal);
+    // append text to paragraph
+    p.appendChild(noteText);
     // append new paragraph and text to existing note output
     noteOutput.appendChild(p);
-    inputNote.value='';
-  };
+    // clear input text field
+    inputNote.value = '';
+  }
+}
 
+function checkVisible(node) {
+  if(node.style.visibility = 'hidden') {
+    // show in DOM to allow fadeIn
+    node.style.display = 'block';
+    node.style.visibility = 'visible';
+    // call fade in for node DOM
+    fadeIn(node);
+  }
 }
 
 // load app
