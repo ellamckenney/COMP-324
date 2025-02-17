@@ -11,7 +11,7 @@ function travelNotes() {
 
   addNoteBtn.addEventListener('click', () => {
     // create p node
-    let p = document.createElement('p');
+    /* let p = document.createElement('p');
     // get value from input field for note
     let inputVal = inputNote.value;
     // create text node
@@ -23,8 +23,35 @@ function travelNotes() {
       // append new paragraph and text to existing note output
       noteOutput.appendChild(p);
       inputNote.value='';
+    } */
+
+    createNote(inputNote, noteOutput);
+  });
+
+  inputNote.addEventListener('keypress', (e) => {
+    if(e.keyCode === 13) {
+      createNote(inputNote, noteOutput);
     }
   });
+
+}
+
+function createNote() {
+
+  // create p node
+  let p = document.createElement('p');
+  // get value from input field for note
+  let inputVal = inputNote.value;
+  // create text node
+  let nodeText = document.createTextNode(inputVal);
+
+  if (inputVal != '') {
+    let noteText =document.createTextNode(inputVal)
+    p.appendChild(nodeText);
+    // append new paragraph and text to existing note output
+    noteOutput.appendChild(p);
+    inputNote.value='';
+  };
 
 }
 
