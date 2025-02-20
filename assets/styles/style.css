@@ -49,4 +49,19 @@ input {
 
 button {
   font-size: 80%;
+  cursor: pointer;
 }
+
+/* note controls */
+.note-controls {
+  margin: 10px 0 10px 0;
+  padding: 3px;
+  border-bottom: 3px solid #dedede;
+}
+/* simplify default button styles for note controls */
+.note-controls button {
+  padding: 3px;
+  margin: 3px;
+  border-radius: 0;
+  border: 1px solid rgb(228, 228, 228);
+} 

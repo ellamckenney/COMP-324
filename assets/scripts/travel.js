@@ -9,6 +9,11 @@ function travelNotes() {
 
   let inputNote = document.getElementById('note-input');
 
+  let controls = document.getElementById('controls');
+
+  // delete all notes button
+  let deleteAll = document.getElementById('notes-delete');
+
   addNoteBtn.addEventListener('click', () => {
     createNote(inputNote, noteOutput);
   });
@@ -16,16 +21,27 @@ function travelNotes() {
   inputNote.addEventListener('keypress', (e) => {
     if(e.keyCode === 13) {
       createNote(inputNote, noteOutput);
+      // check key pressed by code - 13 - return
+      console.log('return key pressed...');
     }
   });
 
+  deleteAll.addEventListener('click', () => {
+    // get notes from DOM
+    let notes = noteOutput.querySelectorAll('p');
+    // loop through notes and remove a single note per iteration...
+    for (let note of notes) {
+      note.remove();
+    }
+  });
 }
 
-function createNote(inputNote, noteOutput) {
+
+function createNote(input, output) {
   // create p node
   let p = document.createElement('p');
   // get value from input field for note
-  let inputVal = inputNote.value;
+  let inputVal = input.value;
   // check input value
   if (inputVal !== '') {
     // create text node
@@ -33,21 +49,22 @@ function createNote(inputNote, noteOutput) {
     // append text to paragraph
     p.appendChild(noteText);
     // append new paragraph and text to existing note output
-    noteOutput.appendChild(p);
+    output.appendChild(p);
     // clear input text field
-    inputNote.value = '';
+    input.value = '';
   }
 }
 
+/* check visibility of passed node
 function checkVisible(node) {
-  if(node.style.visibility = 'hidden') {
-    // show in DOM to allow fadeIn
+  // check passed node's current visibility
+  if (node.style.display != 'block') {
+    // show in DOM to allow fadeIn...
     node.style.display = 'block';
-    node.style.visibility = 'visible';
-    // call fade in for node DOM
+    // call fadeIn for node in DOM
     fadeIn(node);
   }
-}
+} */
 
 // load app
 travelNotes();
