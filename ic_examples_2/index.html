@@ -2,74 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>COMP 324 Class Examples</title>
+    <title>COMP 324 Class Examples 2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="information on travel destinations">
     <meta name="author" content="travelinfo">
-    <!-- css styles -->
+    <!-- site styles -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+    <!-- grid styles -->
     <link rel="stylesheet" type="text/css" href="assets/styles/grid.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <title>COMP 324 Class Examples</title>
   </head>
   <body>
-    <header>
-      <h1>
-        Travel Journal
-      </h1>
-      <p>
-        Travel notes and memories!
-      </p>
-    </header>
-
-    <!-- primary navigation elements, links -->
-
-    <nav>
-      Menu
-    </nav>
+    <!-- grid banner -->
+    <div class="banner">
+      <!-- logo -->
+      <div class="logo">
+        <img src="assets/media/travel_journal.png" alt="site logo" width="70" height="70">
+      </div>
+      <!-- document header -->
+      <header class="site-header">
+        <h1>Travel Journal</h1>
+      </header>
+      <!-- banner extras -->
+      <div class="banner-extras"></div>
+     </div> <!-- end of grid banner -->
 
     <!-- main content -->
+    <main class="main-content">
+      <div class="heading">
+        <!-- note input -->
+        <section class ="input-note">
+          <h5>Add a note:</h5>
+        <input type="text" id="note-input" />
+        <button type="button" id="add-note">Add your Travel Note!</button>
+        </section>
 
-    <main>
-      <!-- note input -->
-      <section id ="input-note">
-        <h5>
-          Add a note:
-        </h5>
-        <input id="note-input">
-        <button type="button" id="add-note">
-          Add your Travel Note!
-        </button>
-      </section>
+        <!-- image search -->
+        <section class="image-search">
+          <h5>Search for an Image</h5>
+        <input type="text" id="image-input" />
+        <button type="button" id="search-images">Search Images</button>
+        </section>
 
-      <!-- note output -->
-      <section class ="note-output">
-      </section>
+        <!-- note output -->
+        <section class="note-output">
+          <h5>Saved Notes:</h5>
+        </section>
 
-      <!-- note controls -->
-      <section class="note-controls">
-        <button id="notes-delete">Delete All Entries</button>
-      </section>
-      
-      <section>
-        <figure>
-          <img src="media/images/technik-museum.jpg" alt="Berlin's Technik Museum" width="200px" height="250px">
-          <figcaption>
-            Technik Museum, Berlin
-          </figcaption>
-        </figure>
-      </section>
-      <aside>
-        The outside of the Technik Museum in Berlin, Germany.
-      </aside>
+        <!-- note controls -->
+        <section class="note-controls">
+          <h4>DANGER ZONE: Note Controls</h4>
+        <button id="notes-delete" class="delete-all">Delete All Entries</button>
+        </section>
+      </div>
     </main>
 
     <footer>
-      <p>
-        Copyright 2025
-      </p>
+      <p>Copyright 2025</p>
     </footer>
 
     <!--- js scripts -->
-    <script type="text/javascript" src="assets/scripts/travel.js"></script>
+    <script type="text/javascript" src="ic_examples_2/assets/scripts/travel.js"></script>
   </body>
 </html>
