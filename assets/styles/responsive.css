@@ -1,0 +1,12 @@
+@media (min-width: 500px) {
+  .image-search {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 120px 60px calc(98vh - 240) 60px;
+    grid-template-areas: 
+        "site-header site-header"
+        "site-nav site-nav"
+        "content-site content"
+        "site-links site-footer";
+        height: 48vh;
+  }
+}

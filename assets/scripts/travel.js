@@ -40,6 +40,8 @@ function travelNotes() {
 function createNote(input, output) {
   // create p node
   let p = document.createElement('p');
+  // create a class for the items
+  p.classList.add('note-item');
   // get value from input field for note
   let inputVal = input.value;
   // check input value
