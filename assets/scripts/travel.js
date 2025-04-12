@@ -27,32 +27,29 @@ function travelNotes() {
   });
 
   deleteAll.addEventListener('click', () => {
-    // get notes from DOM
-    let notes = noteOutput.querySelectorAll('p');
-    // loop through notes and remove a single note per iteration...
+    // target notes in flex layout
+    let notes = document.querySelectorAll('#note-list .flex-item');
     for (let note of notes) {
       note.remove();
     }
-  });
+  });  
 }
 
 
 function createNote(input, output) {
-  // create p node
-  let p = document.createElement('p');
-  // create a class for the items
-  p.classList.add('note-item');
-  // get value from input field for note
+  // create div for flex layout
+  let note = document.createElement('div');
+  // flex-item styling
+  note.classList.add('flex-item');
+  // get input value
   let inputVal = input.value;
-  // check input value
   if (inputVal !== '') {
-    // create text node
-    let noteText = document.createTextNode(inputVal);
-    // append text to paragraph
-    p.appendChild(noteText);
-    // append new paragraph and text to existing note output
-    output.appendChild(p);
-    // clear input text field
+    // set text directly
+    note.textContent = inputVal;
+    // append to flex output area
+    let flexOutput = document.getElementById('note-list');
+    flexOutput.appendChild(note);
+    // clear the input
     input.value = '';
   }
 }

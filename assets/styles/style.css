@@ -3,41 +3,44 @@ body {
   width: 850px;
   margin: auto;
   background: #fff7e1;
+  /* inheritance of elements below: text elements */
   font-size: 16px;
   font-family: sans-serif, "Times New Roman", Tahoma;
-  color: #112241; 
+  color: #112241;
 }
 
 /* headers */
+/* inheritance: overrides font-size from body styles */
 h1 {
   font-size: 1.8em;
   margin-bottom: 10px;
 }
 
+/* inheritance: sets styles for different headings */
 h2, h3, h4, h5 {
   font-weight: bold;
   margin: 10px 0;
 }
 
+/* inheritance: overrides font-size from body styles */
 h5 {
   font-size: 1.25em;
 }
 
 header p {
-  font-size: 0.99em;
-  font-style: italic;
+  font-size: 0.99em; /* inheritance: overrides font-size from body styles */
+  font-style: italic; /* inheritance: sets styles header paragraph elements */
 }
 
 /* footer */
 footer p {
-  font-size: 0.75em; 
-  color: #112241;
+  font-size: 0.75em; /* inheritance: overrides font-size from body styles */
 }
 
 /* structure */
 
 header, footer {
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #444; /* inheritance: defines borders */
 }
 
 footer {
@@ -47,6 +50,7 @@ footer {
 }
 
 /* main */
+/* all text styles inherited from the body styles */
 main {
   overflow: auto;
   padding: 15px 0;
@@ -56,20 +60,21 @@ main {
 
 nav {
   padding-top: 5px;
-  font-size: 0.875em;
+  font-size: 0.875em; /* inheritance: overrides font-size from body styles */
 }
 
 /* form elements */
+/* all text styles inherited from the body styles */
 
 input {
-  color: grey;
+  color: grey; /* inheritance: overrides color from body styles */
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
 button {
-  font-size: 0.7em;
+  font-size: 0.7em; /* inheritance: overrides font-size from body styles */
   cursor: pointer;
   padding: 4px 6px;
   border-radius: 6px;
@@ -86,7 +91,7 @@ button {
 }
 
 .note-controls button {
-  color: red;
+  color: red; /* inheritance: overrides color from body styles */
   padding: 5px;
   margin: 5px;
   border-radius: 3px;
@@ -99,5 +104,25 @@ button {
   border-radius: 10px;
   border: 1px solid #112241;
   margin: 5px;
-  max-width: 200px; /* Optional: set a max width for the notes */
+  max-width: 200px;
+}
+
+/* flex container for styling */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* spacing between notes */
+  margin-top: 15px;
+}
+
+/* flex item for styling */
+.flex-item {
+  flex: 1 1 auto; /* grow, shrink, and initial basis */
+  padding: 10px;
+  background-color: #e4eaff;
+  border: 1px solid #112241;
+  border-radius: 8px;
+  margin: 5px;
+  text-align: center;
+  min-width: 120px; 
 }
