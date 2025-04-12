@@ -56,6 +56,10 @@ main {
   padding: 15px 0;
 }
 
+.load-data {
+  padding-top: 10px;
+}
+
 /* nav */
 
 nav {
