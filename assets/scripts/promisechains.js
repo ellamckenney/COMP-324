@@ -5,7 +5,7 @@ function getNumbers() {
     if (numbers.length > 0) {
       resolve(numbers);
     } else {
-      reject('Nothing found?');
+      reject('No numbers found.');
     }
   });
 }
@@ -15,7 +15,7 @@ function getNumbers() {
 function doubleNumbers(numbers) {
   return new Promise((resolve, reject) => {
     if (!Array.isArray(numbers)) {
-      reject('Input must be an array');
+      reject('Rejected. Please use an array.');
     } else {
       const doubled = numbers.map(n => n * 2);
       resolve(doubled);
@@ -28,7 +28,7 @@ function doubleNumbers(numbers) {
 function sumNumbers(numbers) {
   return new Promise((resolve, reject) => {
     if (!Array.isArray(numbers)) {
-      reject('Input must be an array');
+      reject('Rejected. Please use an array.');
     } else {
       const sum = numbers.reduce((total, current) => total + current, 0);
       resolve(sum);
@@ -45,5 +45,5 @@ getNumbers()
     console.log(`Result: ${result}`);
   })
   .catch(error => {
-    console.log('error found = ', err); 
+    console.log('error! ', err); 
   });
