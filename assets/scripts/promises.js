@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const loading = document.getElementById('loading');
     const result = document.getElementById('result');
 
-    // Load destinations and travel tips in parallel
+    // load json files with cities and their neighborhoods together
     Promise.all([
       getJSON('city.json'),
-      getJSON('neighborhoods.json') // you can create a small one for testing
+      getJSON('neighborhoods.json')
     ])
     .then(response => {
       const cityData = response[0];
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log("Cities:", cityData);
       console.log("Neighborhoods:", neighborhoodData);
 
-      // merge city and w
+      // merge city and neighborhoods
       const merged = cityData.destinations.map(dest => {
         const neighborhoodEntry = neighborhoodData.destinations.find(t => t.name === dest.name);
         return {
