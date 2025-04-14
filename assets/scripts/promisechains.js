@@ -45,4 +45,5 @@ getNumbers()
     console.log(`Result: ${result}`);
   })
   .catch(error => {
-    console.log('error! ', 
+    console.log('error! ', err); 
+  });
