@@ -1,0 +1,31 @@
+{
+  "destinations": [
+    {
+      "name": "Berlin",
+      "neighborhoods": {
+        "downtown": "Mitte",
+        "art_district": "Kreuzberg",
+        "living": "Charlottenburg-Wilmersdorf"
+      },
+      "visited": true
+    },
+    {
+      "name": "Chicago",
+      "neighborhoods": {
+        "downtown": "Loop",
+        "art_district": "Wicker Park",
+        "living": "Lincoln Park"
+      },
+      "visited": true
+    },
+    {
+      "name": "San Francisco",
+      "neighborhoods": {
+        "downtown": "Financial District",
+        "art_district": "The Castro",
+        "living": "Noe Valley"
+      },
+      "visited": false
+    }
+  ]
+}
