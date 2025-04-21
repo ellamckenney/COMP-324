@@ -41,9 +41,4 @@ document.addEventListener("DOMContentLoaded", async function () {
     result.textContent = JSON.stringify(merged, null, 2);
     console.log("Merged:", merged);
     loading.textContent = '';
-  } catch (error) {
-    // handle errors
-    loading.textContent = 'Error when loading travel data!';
-    console.error("Error!", error);
-  }
-});
+  } catch (error
