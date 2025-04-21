@@ -1,0 +1,55 @@
+{
+  "destinations": [
+    {
+      "name": "Berlin",
+      "attractions": [
+        "Brandenburger Tor",
+        "Berlin Wall",
+        "Museumsinsel",
+        "Berliner Fernsehturm",
+        "Berliner Dom"
+      ],
+      "weather": {
+        "spring": "warm",
+        "summer": "hot",
+        "fall": "cool",
+        "winter": "cold"
+      },
+      "visited": true
+    },
+    {
+      "name": "Chicago",
+      "attractions": [
+        "Millennium Park",
+        "Navy Pier",
+        "Willis (Sears) Tower",
+        "Art Institute of Chicago",
+        "Wrigley Field"
+      ],
+      "weather": {
+        "spring": "mild",
+        "summer": "hot",
+        "fall": "cool",
+        "winter": "cold"
+      },
+      "visited": true
+    },
+    {
+      "name": "San Francisco",
+      "attractions": [
+        "Golden Gate Bridge",
+        "Alcatraz Island",
+        "PIER 39",
+        "Palace of Fine Arts",
+        "Painted Ladies"
+      ],
+      "weather": {
+        "spring": "warm",
+        "summer": "hot",
+        "fall": "warm",
+        "winter": "mild"
+      },
+      "visited": false
+    }
+  ]
+}
